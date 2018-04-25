@@ -1,0 +1,137 @@
+
+$logo-font: 'Fascinate-Regular';
+$text-font: 'PoiretOne-Regular';
+$orange: #efb633;
+$beige: #eeda9d;
+$dirty-green: #748660;
+
+@font-face {
+	font-family: 'Fascinate-Regular';
+    src: url('../fonts/Fascinate-Regular.otf');
+}
+@font-face {
+	font-family: 'PoiretOne-Regular';
+    src: url('../fonts/PoiretOne-Regular.ttf');
+}
+
+body{
+	margin:0;
+	padding:0;
+	font-family: $text-font;
+}
+// czy przy bootstrapie nie trzeb czyścić marginów i padingów body?
+
+#header{
+	background: url("../img/shapes-pattern.jpg") no-repeat;
+	background-size: cover;
+	height: 90px;
+	position: relative;
+	// .menu{
+	// 	position: absolute;
+	// 	bottom:0;
+	// 	left:0;
+	// 	background: orange;
+	// 	font-weight: bold;
+	// 	padding: 0 5px;
+	// 	z-index: 1;
+	// 	font-family: $logo-font;
+	// }
+	img{
+		position: absolute;
+		margin-top: 30px;
+		z-index: 2;
+		margin-left: -60px;
+		box-shadow: 0 0 20px black;
+	}
+	span{
+		font-family: $logo-font;
+		font-size: 50px;
+	}
+}
+
+//........................nawigacja boczna..spróbować stąd: https://mdbootstrap.com/javascript/sidenav/......................................................................
+#slider.container{
+	min-width: 1600px;
+}
+
+
+#mySidenav {
+    height: 120px; //100% Full-height
+    width: 100%; /* 0 width - change this with JavaScript */
+    // position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 90px; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0; /* Place content 60px from the top */
+    transition: 0.5s; //0.5 second transition effect to slide in the sidenav
+    position: absolute;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 70px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: $text-font;
+    float: right;
+    // position: absolute;
+    // margin-top: 50px;
+}
+
+// When you mouse over the navigation links, change their color
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+// .sidenav .closebtn {
+//     position: absolute;
+//     top: 0;
+//     right: 25px;
+//     font-size: 36px;
+//     margin-left: 50px;
+// }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+	#mySidenav{
+	height: 50%;
+    width: 250px;
+    z-index: 1; /* Stay on top */
+    top: 90px;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 0; /* Place content 60px from the top */
+    // transition: 0.5s; 0.5 second transition effect to slide in the sidenav
+    position: absolute;
+    // position: fixed; //Stay in place
+	}
+    .sidenav {padding-top: 15px;}
+    .sidenav a {
+    	font-size: 18px;
+		float: none;
+		padding-top:10px;
+    }
+}
+
+// .............koniec nawigacji bocznej.................................
+
+// karuzela 
+// określa wysokośc slidera
+.carousel-inner > .carousel-item > img{
+        height: 400px;
+    }
+
+
