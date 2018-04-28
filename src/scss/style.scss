@@ -18,7 +18,30 @@ body{
 	margin:0;
 	padding:0;
 	font-family: $text-font;
+    background-color: #efb633;
 }
+
+.btn{
+    font-weight: bold;
+}
+
+.btn-primary{
+    background-color: $dirty-green;
+    border: none;
+    color: black;
+}
+
+.btn-primary:hover{
+    background-color: $beige;
+    color: black;
+    border: none;
+}
+
+
+p{
+    font-weight: bold;
+}
+
 // czy przy bootstrapie nie trzeb czyścić marginów i padingów body?
 
 #header{
@@ -43,6 +66,10 @@ body{
 		margin-left: -60px;
 		box-shadow: 0 0 20px black;
 	}
+    img:hover{
+        box-shadow: 0 0 20px $beige;
+        cursor: pointer;
+    }
 	span{
 		font-family: $logo-font;
 		font-size: 50px;
@@ -71,7 +98,7 @@ body{
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 70px 8px 8px 32px;
+    padding: 0px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -81,6 +108,10 @@ body{
     float: right;
     // position: absolute;
     // margin-top: 50px;
+}
+
+.nav_links{
+    padding-top:80px;
 }
 
 // When you mouse over the navigation links, change their color
@@ -106,8 +137,8 @@ body{
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
 	#mySidenav{
-	height: 50%;
-    width: 250px;
+	height: 40%;
+    width: 100%;
     z-index: 1; /* Stay on top */
     top: 90px;
     left: 0;
@@ -124,6 +155,10 @@ body{
 		float: none;
 		padding-top:10px;
     }
+    .nav_links{
+        padding-top: 70px;
+        text-align: center;
+    }
 }
 
 // .............koniec nawigacji bocznej.................................
@@ -135,3 +170,68 @@ body{
     }
 
 
+
+#shopping{
+    background: url("../img/suit_shopping.jpg");
+    background-size: cover;
+    height: 296px;
+}
+
+#przekaz{
+    .row{
+        margin-top: 30px;
+    }
+    .btn{   
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    }
+    .btn:hover{
+        background-color: $beige;
+        border: none;
+    }
+}
+
+#o_firmie{
+    background-color: $beige;
+    padding: 150px 0 150px 0;
+    p{
+        display: inline;
+    }
+    h1{
+        font-family: $logo-font;
+    }
+    #more{
+        display: inline;
+    }
+}
+
+#oferta{
+    background-color: black;
+}
+
+#brands{
+    // overflow: hidden;
+    // height: 128px;
+    text-align:center;
+    img{
+        // width:100%;
+        height:auto;
+    }
+}
+
+footer{
+    background: url("../img/shapes-pattern.jpg") no-repeat;
+    background-size: cover;
+    height: 60px;
+    a{
+        color:black;
+    }
+    a:hover{
+        color:black;
+    }
+    h3{
+        font-weight: bold;
+    }
+}

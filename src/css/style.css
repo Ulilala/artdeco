@@ -9,7 +9,24 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "PoiretOne-Regular"; }
+  font-family: "PoiretOne-Regular";
+  background-color: #efb633; }
+
+.btn {
+  font-weight: bold; }
+
+.btn-primary {
+  background-color: #748660;
+  border: none;
+  color: black; }
+
+.btn-primary:hover {
+  background-color: #eeda9d;
+  color: black;
+  border: none; }
+
+p {
+  font-weight: bold; }
 
 #header {
   background: url("../img/shapes-pattern.jpg") no-repeat;
@@ -22,6 +39,9 @@ body {
     z-index: 2;
     margin-left: -60px;
     box-shadow: 0 0 20px black; }
+  #header img:hover {
+    box-shadow: 0 0 20px #eeda9d;
+    cursor: pointer; }
   #header span {
     font-family: "Fascinate-Regular";
     font-size: 50px; }
@@ -49,7 +69,7 @@ body {
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 70px 8px 8px 32px;
+  padding: 0px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
@@ -57,6 +77,9 @@ body {
   transition: 0.3s;
   font-family: "PoiretOne-Regular";
   float: right; }
+
+.nav_links {
+  padding-top: 80px; }
 
 .sidenav a:hover {
   color: #f1f1f1; }
@@ -70,8 +93,8 @@ body {
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
   #mySidenav {
-    height: 50%;
-    width: 250px;
+    height: 40%;
+    width: 100%;
     z-index: 1;
     /* Stay on top */
     top: 90px;
@@ -88,7 +111,57 @@ body {
   .sidenav a {
     font-size: 18px;
     float: none;
-    padding-top: 10px; } }
+    padding-top: 10px; }
+  .nav_links {
+    padding-top: 70px;
+    text-align: center; } }
 
 .carousel-inner > .carousel-item > img {
   height: 400px; }
+
+#shopping {
+  background: url("../img/suit_shopping.jpg");
+  background-size: cover;
+  height: 296px; }
+
+#przekaz .row {
+  margin-top: 30px; }
+
+#przekaz .btn {
+  border: solid 1px black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px; }
+
+#przekaz .btn:hover {
+  background-color: #eeda9d;
+  border: none; }
+
+#o_firmie {
+  background-color: #eeda9d;
+  padding: 150px 0 150px 0; }
+  #o_firmie p {
+    display: inline; }
+  #o_firmie h1 {
+    font-family: "Fascinate-Regular"; }
+  #o_firmie #more {
+    display: inline; }
+
+#oferta {
+  background-color: black; }
+
+#brands {
+  text-align: center; }
+  #brands img {
+    height: auto; }
+
+footer {
+  background: url("../img/shapes-pattern.jpg") no-repeat;
+  background-size: cover;
+  height: 60px; }
+  footer a {
+    color: black; }
+  footer a:hover {
+    color: black; }
+  footer h3 {
+    font-weight: bold; }
