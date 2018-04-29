@@ -35,3 +35,26 @@ $('#fitting').on('show.bs.modal', function (event) {
   modal.find('#rodzaj').val(rodzaj)
 })
 
+// wyśrodkowuje zdjęcia-linki
+
+function checkWidth(init)
+{
+    /*If browser resized, check width again */
+    if ($(window).width() > 975) {
+        $('#photo_links').removeClass('d-flex');
+    }
+    else {
+        if (!init) {
+            $('#photo_links').addClass('d-flex');
+        }
+    }
+}
+
+$(document).ready(function() {
+    checkWidth(true);
+
+    $(window).resize(function() {
+        checkWidth(false);
+    });
+});
+

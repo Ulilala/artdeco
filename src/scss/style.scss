@@ -15,11 +15,8 @@ $dirty-green: #748660;
 }
 
 body{
-	margin:0;
-	padding:0;
 	font-family: $text-font;
     background-color: #efb633;
-    font-weight: bold;
 }
 
 .btn{
@@ -91,17 +88,17 @@ p{
 
 
 #mySidenav {
-    height: 120px; //100% Full-height
+    height: auto;
     width: 100%; /* 0 width - change this with JavaScript */
     // position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 90px; /* Stay at the top */
+    z-index: 1;// Stay on top
+    // top: 90px; Stay at the top PATRZ position:absolute- niżej
     left: 0;
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0; /* Place content 60px from the top */
+    padding-top: 0;
     transition: 0.5s; //0.5 second transition effect to slide in the sidenav
-    position: absolute;
+    // position: absolute; //jeśli to będzie włączone to nawigacja będzie najeżdżała na treść (nie wiem czy chcę to); razem z top 90px
 }
 
 /* The navigation menu links */
@@ -113,9 +110,7 @@ p{
     display: block;
     transition: 0.3s;
     font-family: $text-font;
-    float: right;
-    // position: absolute;
-    // margin-top: 50px;
+    float: left;
 }
 
 .nav_links{
@@ -126,15 +121,6 @@ p{
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
-/* Position and style the close button (top right corner) */
-// .sidenav .closebtn {
-//     position: absolute;
-//     top: 0;
-//     right: 25px;
-//     font-size: 36px;
-//     margin-left: 50px;
-// }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
@@ -307,7 +293,7 @@ footer{
 #photo_links{
     margin-left: auto;
     margin-right: auto;
-    text-align:center;
+    width:100%;
 }
 
 .tablink {
@@ -319,6 +305,7 @@ footer{
   opacity: 1;
   transition: .5s ease;
   backface-visibility: hidden;
+  align: center;
 }
 
 .middle {
@@ -344,11 +331,12 @@ footer{
   background-color: $dirty-green;
   padding: 5px;
   width: 80px;
+  font-weight: bold;
 }
 
 
-#fitting{
-    input, select, option, textarea{
+#fitting, form{
+    input, select, option, textarea, label{
         font-weight: bold;
     }
 }
@@ -357,4 +345,10 @@ footer{
     box-shadow: 0 0 10px $dirty-green;
     border: none;
 
+}
+
+form{
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
 }

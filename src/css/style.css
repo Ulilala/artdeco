@@ -7,11 +7,8 @@
   src: url("../fonts/PoiretOne-Regular.ttf"); }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "PoiretOne-Regular";
-  background-color: #efb633;
-  font-weight: bold; }
+  background-color: #efb633; }
 
 .btn {
   font-weight: bold; }
@@ -58,22 +55,17 @@ p {
   min-width: 1600px; }
 
 #mySidenav {
-  height: 120px;
+  height: auto;
   width: 100%;
   /* 0 width - change this with JavaScript */
   z-index: 1;
-  /* Stay on top */
-  top: 90px;
-  /* Stay at the top */
   left: 0;
   background-color: #111;
   /* Black*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 0;
-  /* Place content 60px from the top */
-  transition: 0.5s;
-  position: absolute; }
+  transition: 0.5s; }
 
 /* The navigation menu links */
 .sidenav a {
@@ -84,7 +76,7 @@ p {
   display: block;
   transition: 0.3s;
   font-family: "PoiretOne-Regular";
-  float: right; }
+  float: left; }
 
 .nav_links {
   padding-top: 80px; }
@@ -92,7 +84,6 @@ p {
 .sidenav a:hover {
   color: #f1f1f1; }
 
-/* Position and style the close button (top right corner) */
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
@@ -213,7 +204,7 @@ footer {
 #photo_links {
   margin-left: auto;
   margin-right: auto;
-  text-align: center; }
+  width: 100%; }
 
 .tablink {
   position: relative;
@@ -222,7 +213,8 @@ footer {
 .image {
   opacity: 1;
   transition: .5s ease;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  align: center; }
 
 .middle {
   transition: .5s ease;
@@ -243,11 +235,17 @@ footer {
 .text {
   background-color: #748660;
   padding: 5px;
-  width: 80px; }
+  width: 80px;
+  font-weight: bold; }
 
-#fitting input, #fitting select, #fitting option, #fitting textarea {
+#fitting input, #fitting select, #fitting option, #fitting textarea, #fitting label, form input, form select, form option, form textarea, form label {
   font-weight: bold; }
 
 .form-control:focus {
   box-shadow: 0 0 10px #748660;
   border: none; }
+
+form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }

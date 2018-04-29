@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Starter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="m-0 p-0 font-weight-bold">
+	<!-- nowy komentarz próba -->
+	<!-- pasek artdeco z nazwą -->
+	<header id="header" class="page-header text-center py-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 d-none d-sm-block">
+					<span>Modern</span>
+				</div>
+				<div class="col-sm-4">
+					<img id="artdecoelement" src="img/artdecoelement.png" alt="">
+				</div>
+				<div class="col-sm-4 d-none d-sm-block">
+					<span>Elegant</span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--nawigacja-->
+	<div id="mySidenav" class="sidenav col">
+		<div class="nav_links">
+		  <a href="index.html">Home</a>
+		  <a href="garnitury.html">Garnitury</a>
+		  <a href="formularz.html">Przymiarki</a>
+		  <a href="#">O nas</a>
+		  <a href="#">Kontakt</a>
+		</div>
+	</div>
+	<!--nawigacja koniec -->
+	<section>
+		<div class="container">
+				<form class="form-horizontal py-5 mt-5" method="post" action="/action_page.php">
+					<h2 class="font-weight-bold">Umów się na przymiarkę</h2>
+					<div class="form-group">
+				        <label for="rodzaj" class="col-sm-2 control-label">Rodzaj garnituru:</label>
+				        <div class="col-sm-10">
+				        	<input type="text" class="form-control" id="rodzaj">
+				        </div>
+				    </div>
+				    <div class="form-group">
+				       	<label for="czesci" class="control-label col-sm-2">Ilość elementów</label>
+				       	<div class="col-sm-10">
+					        <select class="form-control" id="czesci">
+					            <option></option>
+								<option>Dwuczęściowy (marynarka, spodnie)</option>
+								<option>Trzyczęściowy (marynarka, spodnie, kamizelka)</option>
+							</select>
+						</div>
+				    </div>
+				    <div class="form-group">
+				        <label for="wzrost" class="control-label col-sm-2">Wzrost</label>
+				        <div class="col-sm-10">
+				        	<input type="text" class="form-control" id="wzrost">
+				    	</div>
+				    </div>
+				    <div class="form-group">
+				        <label for="waga" class="control-label col-sm-2">Waga</label>
+				        <div class="col-sm-10">
+				        	<input type="text" class="form-control" id="waga">
+				        </div>
+				    </div>
+				    <div class="form-group">
+				        <label for="styl" class="control-label col-sm-2">Twój styl na codzień</label>
+				        <div class="col-sm-10">
+					        <select class="form-control" id="styl">
+					           	<option></option>
+								<option>Klasyczny</option>
+								<option>Nowoczesny</option>
+							</select>
+						</div>	
+				    </div>
+				    <div class="form-group">
+				        <label for="data" class="control-label col-sm-2">Data przymiarki</label>
+				        <div class="col-sm-10">
+				        	<input type="date" id="data" class="form-control">
+				        </div>	
+				    </div>
+				    <div class="form-group">
+				        <label for="czas" class="control-label col-sm-2">Dogodna godzina</label>
+				        <div class="col-sm-10">
+				        	<input type="text" id="czas" class="form-control">
+				        </div>	
+				    </div>
+				    <div class="form-group">
+				        <label for="message-text" class="control-label col-sm-2">Dodatkowe uwagi np. okazja, kolor, dodatki:</label>
+				        <div class="col-sm-10">
+				        	<textarea class="form-control" id="message-text"></textarea>
+				        </div>	
+				    </div>
+				    <div class="form-group">        
+				      <div class="col-sm-offset-2 col-sm-10">
+				        <button type="submit" class="btn btn-primary float-right">Wyślij</button>
+				      </div>
+				    </div>
+				    	<!-- <button type="button" class="btn btn-primary float-right">Wyślij</button> -->
+				</form>
+		</div>
+	</section>
+
+	
+
+	<!-- stopka FB ikony z https://fontawesome.com/icons?d=gallery -->
+	<footer class="page-footer">
+		<div class="d-flex flex-row justify-content-center">
+			<div class="p-2 d-none d-sm-block">
+				<h3>
+				Bądź na bieżąco z trendami
+				</h3>
+			</div>
+			<div class="p-2">
+				<a href=""><i class="fab fa-facebook fa-2x"></i></a>
+			</div>
+			<div class="p-2">
+				<a href=""><i class="fab fa-twitter fa-2x"></i></a>
+			</div>
+			<div class="p-2">
+				<a href=""><i class="fab fa-instagram fa-2x"></i></a>
+			</div>
+		</div>			
+	</footer>
+
+
+
+	<!-- <div id="test"></div> -->
+
+	
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script type="text/javascript" src="./js/popper.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="./js/myJS.js"></script>
+</body>
+</html>

@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-<body>
+<body class="m-0 p-0 font-weight-bold">
 	<!-- nowy komentarz próba -->
 	<!-- pasek artdeco z nazwą -->
 	<header id="header" class="page-header text-center py-2">
@@ -28,10 +28,11 @@
 	<!--nawigacja-->
 	<div id="mySidenav" class="sidenav col">
 		<div class="nav_links">
-		  <a href="#">About</a>
-		  <a href="#">Services</a>
-		  <a href="#">Clients</a>
-		  <a href="#">Contact</a>
+		  <a href="index.html">Home</a>
+		  <a href="garnitury.html">Garnitury</a>
+		  <a href="formularz.html">Przymiarki</a>
+		  <a href="#">O nas</a>
+		  <a href="#">Kontakt</a>
 		</div>
 	</div>
 	<!--nawigacja koniec -->
@@ -40,7 +41,7 @@
 	<section id="garnitury">
 		<div class="row">
 			<!-- nawigacja obrazkowa -->
-			<div class="col-lg-2 tab" id="photo_links" align="center">
+			<div class="col-lg-2 tab d-flex justify-content-center" id="photo_links">
 				<div class="tablink" onclick="openDescr(event, 'wiz')">
 					<img class="image" src="img/wiz_icon.jpg" alt="">
 					<div class="middle">
@@ -124,7 +125,7 @@
 	            <input type="text" class="form-control" id="rodzaj">
 	          </div>
 	          <div class="form-group">
-	            <label for="czesci" class="col-form-label">Rodzaj garnituru</label>
+	            <label for="czesci" class="col-form-label">Ilość elementów</label>
 	            <select class="form-control" id="czesci">
 	            	<option></option>
 					<option>Dwuczęściowy (marynarka, spodnie)</option>
