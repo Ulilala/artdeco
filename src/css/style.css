@@ -18,13 +18,20 @@ body {
 
 .btn-primary {
   background-color: #748660;
-  border: none;
-  color: black; }
+  border: none !important;
+  color: black !important;
+  box-shadow: none !important; }
 
 .btn-primary:hover {
-  background-color: #eeda9d;
-  color: black;
-  border: none; }
+  background-color: #eeda9d !important;
+  color: black !important;
+  border: none !important;
+  box-shadow: none !important; }
+
+.btn-primary:active, .btn-primary.active {
+  background: #eeda9d !important;
+  border: none !important;
+  color: black !important; }
 
 p {
   font-weight: bold; }
@@ -117,7 +124,8 @@ p {
     padding-top: 70px;
     text-align: center; }
   #garnitury .row {
-    margin-left: 0; }
+    margin-left: 0;
+    align: center; }
   #garnitury #photo_links {
     align: center; }
   #garnitury .tablink {
@@ -192,7 +200,9 @@ footer {
   margin-right: 0; }
 
 .tabcontent {
-  display: none; }
+  display: none;
+  margin-left: auto;
+  margin-right: auto; }
   .tabcontent .opis {
     margin-top: 10%;
     margin-bottom: auto; }
@@ -200,8 +210,14 @@ footer {
     margin-right: 20px;
     float: left; }
 
+#photo_links {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
 .tablink {
-  position: relative; }
+  position: relative;
+  float: left; }
 
 .image {
   opacity: 1;
@@ -228,3 +244,10 @@ footer {
   background-color: #748660;
   padding: 5px;
   width: 80px; }
+
+#fitting input, #fitting select, #fitting option, #fitting textarea {
+  font-weight: bold; }
+
+.form-control:focus {
+  box-shadow: 0 0 10px #748660;
+  border: none; }

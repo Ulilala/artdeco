@@ -40,7 +40,7 @@
 	<section id="garnitury">
 		<div class="row">
 			<!-- nawigacja obrazkowa -->
-			<div class="col-lg-2 tab" id="photo_links">
+			<div class="col-lg-2 tab" id="photo_links" align="center">
 				<div class="tablink" onclick="openDescr(event, 'wiz')">
 					<img class="image" src="img/wiz_icon.jpg" alt="">
 					<div class="middle">
@@ -67,40 +67,107 @@
 				</div>
 			</div>
 			<!-- divy z opisem i dużym zdjęciem -->
-			<div class="col-10 tabcontent" id="wiz">
-				<img src="img/wizytowy.jpg" alt="">
-				<div class="opis d-flex">
+			<div class="col-10 tabcontent" id="wiz" style="display: block;">
+				<img src="img/wizytowy.jpg">
+				<div class="opis">
 					<p>
 						Garnitur wizytowy powinien być wykonany z tkaniny w kolorze granatowym, szarym lub czarnym. Jest najczęściej noszony wieczorem i może być znany pod nazwą garnituru wieczorowego. Taki garnitur ma klapy zamknięte, inaczej zwane szpiczastymi. Kieszenie są proste i wcięte, nie posiadają patek. Z tyłu może być bez szliców, ale najczęściej ma je dwa. Garnitury wizytowe nosimy głównie z białym koszulami. Jest także najwłaściwszy rodzaj garnituru na ślub. Spodnie powinny być bez mankietów. Wskazane jest zapięcie na jeden guzik, wywodzące się ze smokingu. Często zakłada się kamizelkę do zestawu.
 					</p>
 				</div>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#fitting" data-whatever="Wizytowy">Umów się na przymiarkę</button>
 			</div>
 			<div class="col-10 tabcontent" id="work">
 				<img src="img/work.jpg" alt="">
-				<div class="opis d-flex">
+				<div class="opis">
 					<p>
 						Garnitur roboczy (biurowy) zwany popularnie wołem roboczym ma klapy otwarte (nacięte), jest zapinany na dwa lub trzy guziki, a kieszenie ma proste z patkami, czasem z małą kieszonką biletówką. Najczęściej używa się gładkich tkanin, ale zdarzają się też prążki. Taki garnitur posiada zwykle dwa szlice z tyłu. Właściwe kolory to szary i granatowy, czasem brązowy. Czarny jest niewskazanym kolorem na garnitur do pracy.
 					</p>
 				</div>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#fitting" data-whatever="Biurowy">Umów się na przymiarkę</button>
 			</div>
 			<div class="col-10 tabcontent" id="sport">
 				<img src="img/sport.jpg" alt="">
-				<div class="opis d-flex">
+				<div class="opis">
 					<p>
 						Garnitur sportowy ma najczęściej nakładane lub skośne kieszenie (z patkami) oraz klapy otwarte (nacięte). Materiały są w gładkie w jasnych odcieniach. Jeśli występują ciemne, to najczęściej mają wzór kratkę windowpane. Posiada jeden lub dwa szlice z tyłu. Dobrze widziany jest mankiet w spodniach. W przypadku doboru koszul i krawatów jest pełna dowolność. Liczy się tylko fantazja noszącego. Dopuszczalna jest nawet wersja garnituru sportowego z zamkniętymi klapami. W zasadzie garnitur sportowy wyróżnia brak barier. 
 					</p>
 				</div>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#fitting" data-whatever="Sportowy">Umów się na przymiarkę</button>
 			</div>
 			<div class="col-10 tabcontent" id="slubny">
 				<img src="img/slubny.jpg" alt="">
-				<div class="opis d-flex">
+				<div class="opis">
 					<p>
 						Najpowszechniejszym ubraniem ślubnym jest bez wątpienia garnitur, który podczas ślubu nosi większość mężczyzn. Niewiele osób wie, że kolor czarny jest zarezerwowany dla okazji wieczorowych, zatem czarny garnitur noszony na ceremonii zaślubin jest ubraniowym błędem. Najlepsze kolory dla garnituru ślubnego to granatowy lub grafitowy. Opcjonalnie można wziąć pod uwagę kamizelkę, która pozwoli podnieść charakter formalny ubioru, a oprócz tego umożliwi zdjęcie marynarki podczas zabaw weselnych bez konieczności obnażania się przed zebranymi gośćmi do koszuli, która jest przecież elementem bielizny.
 					</p>
 				</div>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#fitting" data-whatever="Ślubny">Umów się na przymiarkę</button>
 			</div>
 		</div>
 	</section>
+
+	<!-- formularz do zapisu na przymiarkę -->
+
+	<div class="modal fade" id="fitting" tabindex="-1" role="dialog" aria-labelledby="fittingLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="fittingLabel" style="font-weight: bold">Prosimy o podanie informacji</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	          <div class="form-group">
+	            <label for="rodzaj" class="col-form-label">Rodzaj garnituru:</label>
+	            <input type="text" class="form-control" id="rodzaj">
+	          </div>
+	          <div class="form-group">
+	            <label for="czesci" class="col-form-label">Rodzaj garnituru</label>
+	            <select class="form-control" id="czesci">
+	            	<option></option>
+					<option>Dwuczęściowy (marynarka, spodnie)</option>
+				    <option>Trzyczęściowy (marynarka, spodnie, kamizelka)</option>
+				</select>
+	          </div>
+	          <div class="form-group">
+	            <label for="wzrost" class="col-form-label">Wzrost</label>
+	            <input type="text" class="form-control" id="wzrost">
+	          </div>
+	          <div class="form-group">
+	            <label for="waga" class="col-form-label">Waga</label>
+	            <input type="text" class="form-control" id="waga">
+	          </div>
+	          <div class="form-group">
+	            <label for="styl" class="col-form-label">Twój styl na codzień</label>
+	            <select class="form-control" id="styl">
+	            	<option></option>
+					<option>Klasyczny</option>
+				    <option>Nowoczesny</option>
+				</select>
+	          </div>
+	          <div class="form-group">
+	            <label for="data" class="col-form-label">Data przymiarki</label>
+	            <input type="date" id="data" class="form-control">
+	          </div>
+	          <div class="form-group">
+	            <label for="czas" class="col-form-label">Dogodna godzina</label>
+	            <input type="text" id="czas" class="form-control">
+	          </div>
+	          <div class="form-group">
+	            <label for="message-text" class="col-form-label">Dodatkowe uwagi np. okazja, kolor, dodatki:</label>
+	            <textarea class="form-control" id="message-text"></textarea>
+	          </div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Send message</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 	
 
 	<!-- stopka FB ikony z https://fontawesome.com/icons?d=gallery -->

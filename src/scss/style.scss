@@ -28,16 +28,23 @@ body{
 
 .btn-primary{
     background-color: $dirty-green;
-    border: none;
-    color: black;
+    border: none !important;
+    color: black !important;
+    box-shadow: none !important;
 }
 
 .btn-primary:hover{
-    background-color: $beige;
-    color: black;
-    border: none;
+    background-color: $beige !important;
+    color: black !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
+.btn-primary:active, .btn-primary.active {
+    background: $beige !important;
+    border: none !important;
+    color: black !important;
+}
 
 p{
     font-weight: bold;
@@ -165,6 +172,7 @@ p{
     #garnitury{
         .row{
             margin-left:0;
+            align: center;
         }
         #photo_links{
             align: center;
@@ -188,6 +196,7 @@ p{
         .middle{
             display: none;
         }
+
         .tabcontent img{
             width: 200px;
             height: auto;
@@ -283,6 +292,8 @@ footer{
 
 .tabcontent{
     display: none;
+    margin-left: auto;
+    margin-right: auto;
     .opis{
         margin-top: 10%;
         margin-bottom:auto;
@@ -290,14 +301,18 @@ footer{
     img{
         margin-right: 20px;
         float: left;
-        // width:39%;
-        // height:auto;
     }
 }
 
+#photo_links{
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
 
 .tablink {
     position: relative;
+    float: left;
 }
 
 .image {
@@ -329,4 +344,17 @@ footer{
   background-color: $dirty-green;
   padding: 5px;
   width: 80px;
+}
+
+
+#fitting{
+    input, select, option, textarea{
+        font-weight: bold;
+    }
+}
+// 
+.form-control:focus{
+    box-shadow: 0 0 10px $dirty-green;
+    border: none;
+
 }
