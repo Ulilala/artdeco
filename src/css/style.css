@@ -10,7 +10,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "PoiretOne-Regular";
-  background-color: #efb633; }
+  background-color: #efb633;
+  font-weight: bold; }
 
 .btn {
   font-weight: bold; }
@@ -93,7 +94,7 @@ p {
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
   #mySidenav {
-    height: 40%;
+    height: 50%;
     width: 100%;
     z-index: 1;
     /* Stay on top */
@@ -114,7 +115,27 @@ p {
     padding-top: 10px; }
   .nav_links {
     padding-top: 70px;
-    text-align: center; } }
+    text-align: center; }
+  #garnitury .row {
+    margin-left: 0; }
+  #garnitury #photo_links {
+    align: center; }
+  #garnitury .tablink {
+    display: inline;
+    width: 55px;
+    height: auto; }
+  #garnitury .tablink img {
+    display: inline;
+    width: 55px;
+    height: auto; }
+  #garnitury #photo_links {
+    margin-top: 80px; }
+  #garnitury .middle {
+    display: none; }
+  #garnitury .tabcontent img {
+    width: 200px;
+    height: auto;
+    margin-top: 20px; } }
 
 .carousel-inner > .carousel-item > img {
   height: 400px; }
@@ -158,10 +179,52 @@ p {
 footer {
   background: url("../img/shapes-pattern.jpg") no-repeat;
   background-size: cover;
-  height: 60px; }
+  height: 60px;
+  width: 100%; }
   footer a {
     color: black; }
   footer a:hover {
     color: black; }
   footer h3 {
     font-weight: bold; }
+
+#garnitury .row {
+  margin-right: 0; }
+
+.tabcontent {
+  display: none; }
+  .tabcontent .opis {
+    margin-top: 10%;
+    margin-bottom: auto; }
+  .tabcontent img {
+    margin-right: 20px;
+    float: left; }
+
+.tablink {
+  position: relative; }
+
+.image {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden; }
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  text-align: center; }
+
+.tablink:hover .image {
+  opacity: 0.3;
+  cursor: pointer; }
+
+.tablink:hover .middle {
+  opacity: 1;
+  cursor: pointer; }
+
+.text {
+  background-color: #748660;
+  padding: 5px;
+  width: 80px; }
