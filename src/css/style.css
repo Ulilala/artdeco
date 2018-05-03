@@ -134,7 +134,12 @@ p {
   #garnitury .tabcontent img {
     width: 200px;
     height: auto;
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .card {
+    min-height: 20px !important;
+    min-width: 120px !important; }
+  .card-text {
+    display: none; } }
 
 .carousel-inner > .carousel-item > img {
   height: 400px; }
@@ -247,5 +252,41 @@ footer {
 
 form {
   width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
+#onas, #kontakt {
+  margin-top: 100px; }
+
+.text-top, #photos {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem; }
+
+.green-back {
+  background-color: #748660;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px black;
+  max-width: 300px;
+  min-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px; }
+
+.orange-back {
+  min-width: 250px;
+  background-color: #efb633;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px black; }
+
+.card {
+  max-width: 250px;
+  min-width: 250px;
+  min-height: 705px;
+  background-color: #748660;
+  box-shadow: 0 0 20px black;
   margin-left: auto;
   margin-right: auto; }

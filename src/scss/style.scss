@@ -189,6 +189,16 @@ p{
             margin-top:20px;
         }
     }
+
+    // zdjęcia onas
+    .card{
+        min-height:20px !important;
+        min-width: 120px !important;
+    }
+
+    .card-text{
+        display: none;
+    }
 }
 
 // .............koniec nawigacji bocznej.................................
@@ -349,6 +359,50 @@ footer{
 
 form{
     width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// strona o nas
+
+#onas, #kontakt{
+    margin-top: 100px;
+}
+
+.text-top, #photos{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+}
+
+.green-back{
+    background-color: $dirty-green;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px black;
+    max-width: 300px;
+    min-width:280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+
+.orange-back{
+    min-width: 250px;
+    background-color: $orange;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px black;
+}
+
+
+.card{
+    max-width:250px; //było 250
+    min-width:250px; //było 250
+    min-height: 705px; //było 705
+    background-color: $dirty-green;
+    box-shadow: 0 0 20px black;
     margin-left: auto;
     margin-right: auto;
 }

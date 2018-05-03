@@ -35,7 +35,7 @@ $('#fitting').on('show.bs.modal', function (event) {
   modal.find('#rodzaj').val(rodzaj)
 })
 
-// wyśrodkowuje zdjęcia-linki
+// wyśrodkowuje zdjęcia-linki na mniejszych ekranach
 
 function checkWidth(init)
 {
@@ -58,3 +58,37 @@ $(document).ready(function() {
     });
 });
 
+// jeśli mały ekran po kliknięciu w zdjęcie wyświetla modal do zrobienia
+
+// function checkWidth(init)
+// {
+//     /*If browser resized, check width again */
+//     if ($(window).width() < 450) {
+//         $('.modal-body').innerHTML('.d-flex');
+//     }
+//     else {
+//         if (!init) {
+//             $('#photo_links').addClass('d-flex');
+//         }
+//     }
+// }
+
+// $(document).ready(function() {
+//     checkWidth(true);
+
+//     $(window).resize(function() {
+//         checkWidth(false);
+//     });
+// });
+
+//wersja 1
+// 1. sprawdź ekran
+// 2. jeśli ekran mniejszy niż 450:
+//   1. weź zdjęcie i onclick otwórz modal
+//   2. weź jego card-text i wpisz do modal body
+
+//wersja 2
+// 1. sprawdź ekran
+// 2. jeśli ekran mniejszy niż 450 to:
+//   1. weź modal-body i wpisz card-text z card (id albo data-whatever)
+//   2. na kliknięcie zjęcia otwórz modal

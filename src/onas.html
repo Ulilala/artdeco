@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Starter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="m-0 p-0 font-weight-bold">
+	<!-- nowy komentarz próba -->
+	<!-- pasek artdeco z nazwą -->
+	<header id="header" class="page-header text-center py-2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 d-none d-sm-block">
+					<span>Modern</span>
+				</div>
+				<div class="col-sm-4">
+					<img id="artdecoelement" src="img/artdecoelement.png" alt="">
+				</div>
+				<div class="col-sm-4 d-none d-sm-block">
+					<span>Elegant</span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!--nawigacja-->
+	<div id="mySidenav" class="sidenav col">
+		<div class="nav_links">
+		  <a href="index.html">Home</a>
+		  <a href="garnitury.html">Garnitury</a>
+		  <a href="formularz.html">Przymiarki</a>
+		  <a href="onas.html">O nas</a>
+		  <a href="#">Kontakt</a>
+		</div>
+	</div>
+	<!--nawigacja koniec -->
+
+	<!-- tekst o nas -->
+	<section class="py-5" id="onas">
+		<div class="container">
+			<div class="row">
+				<div class="text-top">
+					Przedsiębiorstwo Produkcyjno – Handlowe ELEGANT MAN powstało w roku 1989. Jesteśmy firmą rodzinną o długoletnich tradycjach krawieckich zajmującą się produkcją odzieży męskiej, damskiej oraz korporacyjnej.
+
+					Od początku działalności postawiliśmy na jakość oferowanych produktów. Idąc tą drogą zatrudniamy obecnie wykwalifikowaną kadrę pracowników oraz nieustannie inwestujemy w nowoczesny park maszynowy. W 2004 roku starania te zaowocowały przyznaniem Certyfikatu Jakości ISO 9001.
+
+					Obecnie nasze wyroby doskonale sprzedają się na terenie całej Polski i w krajach UE. Ciekawe wzornictwo, bogata kolorystyka, staranne wykonanie, dobre jakościowo materiały i dodatki oraz atrakcyjne ceny – to nasze atuty. Rosnący popyt na wyroby potwierdza fakt, że potrafimy trafić w gust potencjalnych klientów zaspokajając ich oczekiwania.
+
+					Wychodząc naprzeciw oczekiwaniom klientów lokalnych w 2002 roku uruchomiliśmy w Słupsku SKLEP FIRMOWY. Szybko okazało się, że do naszego sklepu chętnie zaglądają nie tylko mieszkańcy Słupska i okolic ale również klienci z Gdańska, Lęborka czy Koszalina.
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- zdjęcia osób -->
+	<section class="py-5" id="photos">
+		<div class="container">
+			<div class="row align-content-center justify-content-center">
+				<div class="col-lg-4 cards">
+					<div class="green-back">
+						<div class="orange-back">
+							<div class="card" id="owner">
+							  <img class="card-img-top" src="img/owner.jpg" alt="owner photo">
+							  <div class="card-body">
+							  	<h5 class="card-title font-weight-bold">Bartosz Kowalski</h5>
+							  	<h5 class="card-title font-weight-bold">Właściciel</h5>
+							    <p class="card-text">Założyciel marki. Od samego początku uczestniczy we wszystkich procesach dotyczących produkcji i sprzedaży garniturów. Zwiedził całą Europę i Stany Zjednoczone. Wie co to jakość.</p>
+							  </div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-4 cards">
+					<div class="green-back">
+						<div class="orange-back">
+							<div class="card" id="konstruktor">
+							  <img class="card-img-top" src="img/konstruktor.jpg" alt="konstruktor photo">
+							  <div class="card-body">
+							  	<h5 class="card-title font-weight-bold">Dagmara Nowosielska</h5>
+							  	<h5 class="card-title font-weight-bold">Główny kontstruktor</h5>
+							    <p class="card-text">Absolwentka MSKPU w Warszawie. Od urodzenia w rodzinie kaletniczej (3 pokolenia). Miłośniczka stylu skandynawskiego. Minimalizm i prezycja cięcia w garniturach są dla niej najważniejsze.</p>
+							  </div>
+							</div>
+						</div>
+					</div>	
+				</div>
+				<div class="col-lg-4 cards">
+					<div class="green-back">
+						<div class="orange-back">
+							<div class="card" id="researcher">
+							  <img class="card-img-top" src="img/researcher.jpg" alt="researcher photo">
+							  <div class="card-body">
+							  	<h5 class="card-title font-weight-bold">Małgorzata Wróbel</h5>
+							  	<h5 class="card-title font-weight-bold">Researcher</h5>
+							    <p class="card-text">Ma oczy wokół głowy. Wszędzie jej pełno. Zna wszystko co jest na topie. Pokazuje nam trendy zanim ujrzą je magazyny. Zawsze stawia na swoim a my dobrze na tym wychodzimy.</p>
+							  </div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- modal -->
+
+	<div class="modal fade" id="fitting" tabindex="-1" role="dialog" aria-labelledby="fittingLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      <div class="modal-body">
+	       
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Send message</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+	<!-- stopka FB ikony z https://fontawesome.com/icons?d=gallery -->
+	<footer class="page-footer">
+		<div class="d-flex flex-row justify-content-center">
+			<div class="p-2 d-none d-sm-block">
+				<h3>
+				Bądź na bieżąco z trendami
+				</h3>
+			</div>
+			<div class="p-2">
+				<a href=""><i class="fab fa-facebook fa-2x"></i></a>
+			</div>
+			<div class="p-2">
+				<a href=""><i class="fab fa-twitter fa-2x"></i></a>
+			</div>
+			<div class="p-2">
+				<a href=""><i class="fab fa-instagram fa-2x"></i></a>
+			</div>
+		</div>			
+	</footer>
+
+
+
+	<!-- <div id="test"></div> -->
+
+	
+
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script type="text/javascript" src="./js/popper.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/fontawesome-all.min.js"></script>
+	<script type="text/javascript" src="./js/myJS.js"></script>
+</body>
+</html>
