@@ -32,7 +32,7 @@
 		  <a href="garnitury.html">Garnitury</a>
 		  <a href="formularz.html">Przymiarki</a>
 		  <a href="onas.html">O nas</a>
-		  <a href="#">Kontakt</a>
+		  <a href="kontakt.html">Kontakt</a>
 		</div>
 	</div>
 	<!--nawigacja koniec -->
@@ -62,7 +62,7 @@
 					<div class="green-back">
 						<div class="orange-back">
 							<div class="card" id="owner">
-							  <img class="card-img-top" src="img/owner.jpg" alt="owner photo">
+							  <button data-target="#open-photo" data-toggle="modal"><img class="card-img-top" src="img/owner.jpg" alt="owner photo"></button>
 							  <div class="card-body">
 							  	<h5 class="card-title font-weight-bold">Bartosz Kowalski</h5>
 							  	<h5 class="card-title font-weight-bold">Właściciel</h5>
@@ -76,7 +76,7 @@
 					<div class="green-back">
 						<div class="orange-back">
 							<div class="card" id="konstruktor">
-							  <img class="card-img-top" src="img/konstruktor.jpg" alt="konstruktor photo">
+							  <button class="py-0" data-target="#open-photo" data-toggle="modal"><img class="card-img-top" src="img/konstruktor.jpg" alt="konstruktor photo"></button>
 							  <div class="card-body">
 							  	<h5 class="card-title font-weight-bold">Dagmara Nowosielska</h5>
 							  	<h5 class="card-title font-weight-bold">Główny kontstruktor</h5>
@@ -90,7 +90,7 @@
 					<div class="green-back">
 						<div class="orange-back">
 							<div class="card" id="researcher">
-							  <img class="card-img-top" src="img/researcher.jpg" alt="researcher photo">
+							  <button data-target="#open-photo" data-toggle="modal"><img class="card-img-top" src="img/researcher.jpg" alt="researcher photo"></button>
 							  <div class="card-body">
 							  	<h5 class="card-title font-weight-bold">Małgorzata Wróbel</h5>
 							  	<h5 class="card-title font-weight-bold">Researcher</h5>
@@ -103,15 +103,15 @@
 			</div>
 		</div>
 	</section>
-	<!-- modal -->
 
+	<!-- modal -->
 	<div class="modal fade" id="fitting" tabindex="-1" role="dialog" aria-labelledby="fittingLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
-	      <div class="modal-body">
+	      <div class="modal-body" id="modal-body">
 	       
 	      </div>
 	      <div class="modal-footer">

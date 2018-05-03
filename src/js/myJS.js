@@ -60,26 +60,7 @@ $(document).ready(function() {
 
 // jeśli mały ekran po kliknięciu w zdjęcie wyświetla modal do zrobienia
 
-// function checkWidth(init)
-// {
-//     /*If browser resized, check width again */
-//     if ($(window).width() < 450) {
-//         $('.modal-body').innerHTML('.d-flex');
-//     }
-//     else {
-//         if (!init) {
-//             $('#photo_links').addClass('d-flex');
-//         }
-//     }
-// }
 
-// $(document).ready(function() {
-//     checkWidth(true);
-
-//     $(window).resize(function() {
-//         checkWidth(false);
-//     });
-// });
 
 //wersja 1
 // 1. sprawdź ekran

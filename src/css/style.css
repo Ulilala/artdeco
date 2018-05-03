@@ -92,7 +92,7 @@ p {
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
   #mySidenav {
-    height: 50%;
+    height: 80%;
     width: 100%;
     z-index: 1;
     /* Stay on top */
@@ -184,7 +184,8 @@ footer {
   background: url("../img/shapes-pattern.jpg") no-repeat;
   background-size: cover;
   height: 60px;
-  width: 100%; }
+  width: 100%;
+  bottom: 0; }
   footer a {
     color: black; }
   footer a:hover {
@@ -255,7 +256,7 @@ form {
   margin-left: auto;
   margin-right: auto; }
 
-#onas, #kontakt {
+#onas, #kontakt, #mapa {
   margin-top: 100px; }
 
 .text-top, #photos {
