@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Garnitury</title>
+	<title>Modern Elegant</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body class="m-0 p-0 font-weight-bold">
-	<!-- nowy komentarz próba -->
+	
 	<!-- pasek artdeco z nazwą -->
 	<header id="header" class="page-header text-center py-2">
 		<div class="container">
@@ -148,6 +148,15 @@
 				    <option>Nowoczesny</option>
 				</select>
 	          </div>
+	          	<div class="form-group">
+					<label for="styl" class="col-form-label">Miasto/Sklep</label>
+					<select class="form-control" id="styl">
+						<option></option>
+						<option>Gdańsk</option>
+						<option>Gdynia</option>
+						<option>Słupsk</option>
+					</select>
+				</div>
 	          <div class="form-group">
 	            <label for="data" class="col-form-label">Data przymiarki</label>
 	            <input type="date" id="data" class="form-control">
@@ -163,13 +172,29 @@
 	        </form>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Send message</button>
+	      	<button type="submit" class="btn btn-primary" id="submit" data-dismiss="modal" data-toggle="modal" data-target="#modal-alert">Wyślij</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-	
+
+	<!-- alert -->
+	<div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header" style="background-color: #748660;">
+        			<h5 class="modal-title" id="exampleModalLabel">Wiadomość wysłana</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        			</button>
+     			 </div>
+      			<div class="modal-body">
+        			Bardzo dziękujemy za kontakt z nami. W ciągu doby skontaktuje się z Panem telefonicznie (jeśli został podany numer) lub mailowo nasz doradca i potwierdzi możliwość spotknia.
+      			</div>
+    		</div>
+  		</div>
+	</div>
 
 	<!-- stopka FB ikony z https://fontawesome.com/icons?d=gallery -->
 	<footer class="page-footer">
@@ -189,13 +214,7 @@
 				<a href=""><i class="fab fa-instagram fa-2x"></i></a>
 			</div>
 		</div>			
-	</footer>
-
-
-
-	<!-- <div id="test"></div> -->
-
-	
+	</footer>	
 
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>

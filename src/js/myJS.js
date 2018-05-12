@@ -1,8 +1,9 @@
+
 // chowanie menu
 
-$(document).ready(function(){
+$(document).ready(function() {
 	$("#mySidenav").hide();
-    $("#artdecoelement").click(function(){
+    $("#artdecoelement").click(function() {
         $("#mySidenav").toggle();
     });
 });
@@ -26,26 +27,30 @@ function openDescr(evt, contentName) {
 
 // do modalu:
 $('#fitting').on('show.bs.modal', function (event) {
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var rodzaj = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var button = $(event.relatedTarget) 
+  var rodzaj = button.data('whatever')
   var modal = $(this)
-  // modal.find('.modal-title').text('New message to ' + rodzaj)
   modal.find('#rodzaj').val(rodzaj)
 })
 
-// wyśrodkowuje zdjęcia-linki na mniejszych ekranach
+// wyśrodkowuje zdjęcia-linki na mniejszych ekranach i włącza buttona na stronie onas
 
 function checkWidth(init)
 {
-    /*If browser resized, check width again */
     if ($(window).width() > 975) {
         $('#photo_links').removeClass('d-flex');
     }
     else {
         if (!init) {
             $('#photo_links').addClass('d-flex');
+        }
+    }
+    if ($(window).width() < 434) {
+        $('#photos button').prop('disabled', false);
+    }
+     else {
+        if (!init) {
+            $('#photos button').prop('disabled', true);
         }
     }
 }
@@ -58,18 +63,16 @@ $(document).ready(function() {
     });
 });
 
-// jeśli mały ekran po kliknięciu w zdjęcie wyświetla modal do zrobienia
+// tablice do opisów O nas
 
+var opisyApp = angular.module('app', []);
+ 
+ opisyApp.controller('opisy', function($scope){
+    // // dane
+    $scope.opisy = [
+                    { Id: 'owner', Osoba: "Bartosz Kowalski", Photo: 'img/owner.jpg', Stanowisko: 'Właściciel', Description: "Założyciel marki. Od samego początku uczestniczy we wszystkich procesach dotyczących produkcji i sprzedaży garniturów. Zwiedził całą Europę i Stany Zjednoczone. Wie co to jakość."},
+                    { Id: 'konstruktor', Osoba: "Dagmara Nowosielska", Photo: 'img/konstruktor.jpg', Stanowisko: 'Główny kontstruktor', Description: "Absolwentka MSKPU w Warszawie. Od urodzenia w rodzinie kaletniczej (3 pokolenia). Miłośniczka stylu skandynawskiego. Minimalizm i prezycja cięcia w garniturach są dla niej najważniejsze."},
+                    { Id: 'researcher', Osoba: "Małgorzata Wróbel", Photo: 'img/researcher.jpg', Stanowisko: 'Researcher', Description: "Ma oczy wokół głowy. Wszędzie jej pełno. Zna wszystko co jest na topie. Pokazuje nam trendy zanim ujrzą je magazyny. Zawsze stawia na swoim a my dobrze na tym wychodzimy."}
+            ];        
 
-
-//wersja 1
-// 1. sprawdź ekran
-// 2. jeśli ekran mniejszy niż 450:
-//   1. weź zdjęcie i onclick otwórz modal
-//   2. weź jego card-text i wpisz do modal body
-
-//wersja 2
-// 1. sprawdź ekran
-// 2. jeśli ekran mniejszy niż 450 to:
-//   1. weź modal-body i wpisz card-text z card (id albo data-whatever)
-//   2. na kliknięcie zjęcia otwórz modal
+ });

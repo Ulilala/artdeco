@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Project Starter</title>
+	<title>Modern Elegant</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
-<body class="m-0 p-0 font-weight-bold">
+<body class="m-0 p-0 font-weight-bold" ng-app="app" ng-controller="opisy">
 	<!-- nowy komentarz próba -->
 	<!-- pasek artdeco z nazwą -->
 	<header id="header" class="page-header text-center py-2">
@@ -54,47 +54,20 @@
 		</div>
 	</section>
 
+
 	<!-- zdjęcia osób -->
 	<section class="py-5" id="photos">
 		<div class="container">
 			<div class="row align-content-center justify-content-center">
-				<div class="col-lg-4 cards">
+				<div class="col-lg-4 cards" ng-repeat="opis in opisy">
 					<div class="green-back">
 						<div class="orange-back">
-							<div class="card" id="owner">
-							  <button data-target="#open-photo" data-toggle="modal"><img class="card-img-top" src="img/owner.jpg" alt="owner photo"></button>
+							<div class="card" id="{{opisy[$index].Id}}">
+							  <button data-target="#modal{{$index}}" data-toggle="modal" disabled><img class="card-img-top" src="{{opisy[$index].Photo}}"></button>
 							  <div class="card-body">
-							  	<h5 class="card-title font-weight-bold">Bartosz Kowalski</h5>
-							  	<h5 class="card-title font-weight-bold">Właściciel</h5>
-							    <p class="card-text">Założyciel marki. Od samego początku uczestniczy we wszystkich procesach dotyczących produkcji i sprzedaży garniturów. Zwiedził całą Europę i Stany Zjednoczone. Wie co to jakość.</p>
-							  </div>
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="col-lg-4 cards">
-					<div class="green-back">
-						<div class="orange-back">
-							<div class="card" id="konstruktor">
-							  <button class="py-0" data-target="#open-photo" data-toggle="modal"><img class="card-img-top" src="img/konstruktor.jpg" alt="konstruktor photo"></button>
-							  <div class="card-body">
-							  	<h5 class="card-title font-weight-bold">Dagmara Nowosielska</h5>
-							  	<h5 class="card-title font-weight-bold">Główny kontstruktor</h5>
-							    <p class="card-text">Absolwentka MSKPU w Warszawie. Od urodzenia w rodzinie kaletniczej (3 pokolenia). Miłośniczka stylu skandynawskiego. Minimalizm i prezycja cięcia w garniturach są dla niej najważniejsze.</p>
-							  </div>
-							</div>
-						</div>
-					</div>	
-				</div>
-				<div class="col-lg-4 cards">
-					<div class="green-back">
-						<div class="orange-back">
-							<div class="card" id="researcher">
-							  <button data-target="#open-photo" data-toggle="modal"><img class="card-img-top" src="img/researcher.jpg" alt="researcher photo"></button>
-							  <div class="card-body">
-							  	<h5 class="card-title font-weight-bold">Małgorzata Wróbel</h5>
-							  	<h5 class="card-title font-weight-bold">Researcher</h5>
-							    <p class="card-text">Ma oczy wokół głowy. Wszędzie jej pełno. Zna wszystko co jest na topie. Pokazuje nam trendy zanim ujrzą je magazyny. Zawsze stawia na swoim a my dobrze na tym wychodzimy.</p>
+							  	<h5 class="card-title font-weight-bold">{{opisy[$index].Osoba}}</h5>
+							  	<h5 class="card-title font-weight-bold">{{opisy[$index].Stanowisko}}</h5>
+							    <p class="card-text">{{opisy[$index].Description}}</p>
 							  </div>
 							</div>
 						</div>
@@ -105,18 +78,18 @@
 	</section>
 
 	<!-- modal -->
-	<div class="modal fade" id="fitting" tabindex="-1" role="dialog" aria-labelledby="fittingLabel" aria-hidden="true">
+	<div class="modal fade" id="modal{{$index}}" tabindex="-1" role="dialog" aria-labelledby="fittingLabel" aria-hidden="true" ng-repeat="opis in opisy">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
 	      <div class="modal-body" id="modal-body">
-	       
+	       	<h3>Opis</h3>
+	       	<p>{{opisy[$index].Description}}</p>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Send message</button>
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
 	      </div>
 	    </div>
 	  </div>
@@ -142,13 +115,8 @@
 			</div>
 		</div>			
 	</footer>
-
-
-
-	<!-- <div id="test"></div> -->
-
 	
-
+	<script src="./js/angular.js"></script>
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 	<script type="text/javascript" src="./js/popper.min.js"></script>

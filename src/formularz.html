@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Project Starter</title>
+	<title>Modern Elegant</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
@@ -38,75 +38,120 @@
 	<!--nawigacja koniec -->
 
 	<section>
-		<div class="container">
-				<form class="form-horizontal py-5 mt-5" method="post" action="/action_page.php">
-					<h2 class="font-weight-bold">Umów się na przymiarkę</h2>
-					<div class="form-group">
-				        <label for="rodzaj" class="col-sm-2 control-label">Rodzaj garnituru:</label>
-				        <div class="col-sm-10">
-				        	<input type="text" class="form-control" id="rodzaj">
+		<form class="form py-5 mt-5" method="" action=""> <!-- //action_page.php" method:post-->
+			<div class="container">
+					<h2 class="font-weight-bold my-5">Umów się na przymiarkę</h2>
+					<div class="form-group py-1">
+						<div class="row">
+					        <label for="rodzaj" class="col-sm-2 control-label">Rodzaj garnituru:</label>
+					        <div class="col-sm-10">
+					        	<input type="text" class="form-control" id="rodzaj">
+					        </div>
 				        </div>
 				    </div>
-				    <div class="form-group">
-				       	<label for="czesci" class="control-label col-sm-2">Ilość elementów</label>
-				       	<div class="col-sm-10">
-					        <select class="form-control" id="czesci">
-					            <option></option>
-								<option>Dwuczęściowy (marynarka, spodnie)</option>
-								<option>Trzyczęściowy (marynarka, spodnie, kamizelka)</option>
-							</select>
+				    <div class="form-group py-1">
+				    	<div class="row">
+					       	<label for="czesci" class="control-label col-sm-2">Ilość elementów</label>
+					       	<div class="col-sm-10">
+						        <select class="form-control" id="czesci">
+						            <option></option>
+									<option>Dwuczęściowy (marynarka, spodnie)</option>
+									<option>Trzyczęściowy (marynarka, spodnie, kamizelka)</option>
+								</select>
+							</div>
 						</div>
 				    </div>
-				    <div class="form-group">
-				        <label for="wzrost" class="control-label col-sm-2">Wzrost</label>
-				        <div class="col-sm-10">
-				        	<input type="text" class="form-control" id="wzrost">
+				    <div class="form-group py-1">
+				    	<div class="row">
+					        <label for="wzrost" class="control-label col-sm-2">Wzrost</label>
+					        <div class="col-sm-10">
+					        	<input type="text" class="form-control" id="wzrost">
+					    	</div>
 				    	</div>
 				    </div>
-				    <div class="form-group">
-				        <label for="waga" class="control-label col-sm-2">Waga</label>
-				        <div class="col-sm-10">
-				        	<input type="text" class="form-control" id="waga">
+				    <div class="form-group py-1">
+				    	<div class="row">
+					        <label for="waga" class="control-label col-sm-2">Waga</label>
+					        <div class="col-sm-10">
+					        	<input type="text" class="form-control" id="waga">
+					        </div>
 				        </div>
 				    </div>
-				    <div class="form-group">
-				        <label for="styl" class="control-label col-sm-2">Twój styl na codzień</label>
-				        <div class="col-sm-10">
-					        <select class="form-control" id="styl">
-					           	<option></option>
-								<option>Klasyczny</option>
-								<option>Nowoczesny</option>
-							</select>
+				    <div class="form-group py-1">
+				    	<div class="row">
+					        <label for="styl" class="control-label col-sm-2">Twój styl na codzień</label>
+					        <div class="col-sm-10">
+						        <select class="form-control" id="styl">
+						           	<option></option>
+									<option>Klasyczny</option>
+									<option>Nowoczesny</option>
+								</select>
+							</div>
 						</div>	
 				    </div>
-				    <div class="form-group">
-				        <label for="data" class="control-label col-sm-2">Data przymiarki</label>
-				        <div class="col-sm-10">
-				        	<input type="date" id="data" class="form-control">
+				    <div class="form-group py-1">
+				    	<div class="row">
+					        <label for="styl" class="control-label col-sm-2">Miasto/Sklep</label>
+					        <div class="col-sm-10">
+						        <select class="form-control" id="styl">
+						           	<option></option>
+									<option>Gdańsk</option>
+									<option>Gdynia</option>
+									<option>Słupsk</option>
+								</select>
+							</div>
+						</div>	
+				    </div>
+				    <div class="form-group py-1">
+				    	<div class="row">
+					        <label for="data" class="control-label col-sm-2">Data przymiarki</label>
+					        <div class="col-sm-10">
+					        	<input type="date" id="data" class="form-control">
+					        </div>
 				        </div>	
 				    </div>
-				    <div class="form-group">
-				        <label for="czas" class="control-label col-sm-2">Dogodna godzina</label>
-				        <div class="col-sm-10">
-				        	<input type="text" id="czas" class="form-control">
-				        </div>	
+				    <div class="form-group py-1">
+				    	<div class="row">
+					        <label for="czas" class="control-label col-sm-2">Dogodna godzina</label>
+					        <div class="col-sm-10">
+					        	<input type="text" id="czas" class="form-control">
+					        </div>
+				        </div>
 				    </div>
-				    <div class="form-group">
-				        <label for="message-text" class="control-label col-sm-2">Dodatkowe uwagi np. okazja, kolor, dodatki:</label>
-				        <div class="col-sm-10">
-				        	<textarea class="form-control" id="message-text"></textarea>
-				        </div>	
+				    <div class="form-group py-1">
+				    	<div class="row">
+					        <label for="message-text" class="control-label col-sm-2">Dodatkowe uwagi np. okazja, kolor, dodatki:</label>
+					        <div class="col-sm-10">
+					        	<textarea class="form-control" id="message-text"></textarea>
+					        </div>
+				        </div>
 				    </div>
-				    <div class="form-group">        
+				    <div class="form-group py-1">        
 				      <div class="col-sm-offset-2 col-sm-10">
-				        <button type="submit" class="btn btn-primary float-right">Wyślij</button>
+				        <button type="submit" class="btn btn-primary float-right" data-toggle="modal" data-target="#testalert">Wyślij</button>
 				      </div>
 				    </div>
-				    	<!-- <button type="button" class="btn btn-primary float-right">Wyślij</button> -->
-				</form>
-		</div>
+			</div>
+		</form>
 	</section>
 
+	<!-- alert -->
+	<!-- <div class="modal fade" id="testalert" tabindex="-1" role="dialog" aria-labelledby="testalertModalLabel" aria-hidden="true">
+  		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+      			<div class="modal-header" style="background-color: #748660;">
+        			<h5 class="modal-title" id="exampleModalLabel">Wiadomość wysłana</h5>
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          			<span aria-hidden="true">&times;</span>
+        			</button>
+     			 </div>
+      			<div class="modal-body">
+        			Bardzo dziękujemy za kontakt z nami. W ciągu doby skontaktuje się z Panem telefonicznie (jeśli został podany numer) lub mailowo nasz doradca i potwierdzi możliwość spotknia.
+      			</div>
+    		</div>
+  		</div>
+	</div>
+ -->
 	
 
 	<!-- stopka FB ikony z https://fontawesome.com/icons?d=gallery -->

@@ -14,9 +14,21 @@ $dirty-green: #748660;
     src: url('../fonts/PoiretOne-Regular.ttf');
 }
 
+html{
+     min-height:100%;
+     position:relative;
+}
+
 body{
 	font-family: $text-font;
     background-color: #efb633;
+}
+
+#photos button{
+    padding:0;
+    background-color: none;
+    border: none;
+    border-radius: 5px;
 }
 
 .btn{
@@ -47,23 +59,12 @@ p{
     font-weight: bold;
 }
 
-// czy przy bootstrapie nie trzeb czyścić marginów i padingów body?
 
 #header{
-	background: url("../img/shapes-pattern.jpg") no-repeat;
+	background: url("../img/header-pattern.jpg") no-repeat;
 	background-size: cover;
 	height: 90px;
 	position: relative;
-	// .menu{
-	// 	position: absolute;
-	// 	bottom:0;
-	// 	left:0;
-	// 	background: orange;
-	// 	font-weight: bold;
-	// 	padding: 0 5px;
-	// 	z-index: 1;
-	// 	font-family: $logo-font;
-	// }
 	img{
 		position: absolute;
 		margin-top: 30px;
@@ -78,10 +79,11 @@ p{
 	span{
 		font-family: $logo-font;
 		font-size: 50px;
+        text-shadow: 0 0 20px $beige;
 	}
 }
 
-//........................nawigacja boczna..spróbować stąd: https://mdbootstrap.com/javascript/sidenav/......................................................................
+//................nawigacja boczna...................
 #slider.container{
 	min-width: 1600px;
 }
@@ -89,19 +91,16 @@ p{
 
 #mySidenav {
     height: auto;
-    width: 100%; /* 0 width - change this with JavaScript */
-    // position: fixed; /* Stay in place */
-    z-index: 1;// Stay on top
-    // top: 90px; Stay at the top PATRZ position:absolute- niżej
+    width: 100%;
+    z-index: 1;
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
+    background-color: #111; 
+    overflow-x: hidden;
     padding-top: 0;
-    transition: 0.5s; //0.5 second transition effect to slide in the sidenav
-    // position: absolute; //jeśli to będzie włączone to nawigacja będzie najeżdżała na treść (nie wiem czy chcę to); razem z top 90px
+    transition: 0.5s;
+    // position: absolute; //możliwe wysuwanie się nawigacji na treść; razem z top 90px
 }
 
-/* The navigation menu links */
 .sidenav a {
     padding: 0px 8px 8px 32px;
     text-decoration: none;
@@ -117,31 +116,26 @@ p{
     padding-top:80px;
 }
 
-// When you mouse over the navigation links, change their color
 .sidenav a:hover {
     color: #f1f1f1;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
     padding: 20px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
 	#mySidenav{
-	height: 80%;
+	height: 30%;
     width: 100%;
-    z-index: 1; /* Stay on top */
+    z-index: 1;
     top: 90px;
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0; /* Place content 60px from the top */
-    // transition: 0.5s; 0.5 second transition effect to slide in the sidenav
+    background-color: #111; 
+    overflow-x: hidden;
+    padding-top: 0;
     position: absolute;
-    // position: fixed; //Stay in place
 	}
     .sidenav {padding-top: 15px;}
     .sidenav a {
@@ -154,7 +148,7 @@ p{
         text-align: center;
     }
 
-    // strona o garniturach
+    // strona o garniturach.............................................................................
     #garnitury{
         .row{
             margin-left:0;
@@ -167,7 +161,6 @@ p{
             display:inline;
             width:55px;
             height: auto;
-            // padding-right:0;
         }
 
         .tablink img{
@@ -189,27 +182,42 @@ p{
             margin-top:20px;
         }
     }
+    
 
-    // zdjęcia onas
+    // zdjęcia onas..................................................................
     .card{
         min-height:20px !important;
         min-width: 120px !important;
+        img{
+            cursor: pointer;
+        }
     }
+
 
     .card-text{
         display: none;
     }
 }
 
-// .............koniec nawigacji bocznej.................................
 
-// karuzela 
+// karuzela ............................................................................
 // określa wysokośc slidera
 .carousel-inner > .carousel-item > img{
         height: 400px;
     }
 
+#mycarousel{
+    h5, p{
+        color: $orange;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+}
 
+
+// koniec karuzeli.......................................................................................
+
+// strona główna zdjęcie i opis firmy.....................................................................
 
 #shopping{
     background: url("../img/suit_shopping.jpg");
@@ -233,6 +241,8 @@ p{
     }
 }
 
+
+
 #o_firmie{
     background-color: $beige;
     padding: 150px 0 150px 0;
@@ -247,38 +257,36 @@ p{
     }
 }
 
+
+// strona główna zdjęcia powiązanych firm....................................
 #oferta{
     background-color: black;
 }
 
 #brands{
-    // overflow: hidden;
-    // height: 128px;
     text-align:center;
     img{
-        // width:100%;
         height:auto;
     }
 }
 
 footer{
-    background: url("../img/shapes-pattern.jpg") no-repeat;
+    background: url("../img/header-pattern.jpg") no-repeat;
     background-size: cover;
     height: 60px;
     width:100%;
-    bottom: 0;
     a{
         color:black;
     }
     a:hover{
-        color:black;
+        color:white;
     }
     h3{
         font-weight: bold;
     }
 }
 
-// STRONA GARNITURY
+// strona garnitury...................................................................................
 
 #garnitury{
     // row robi niepotrzebnie margines z prawej - usunęłam
@@ -345,7 +353,6 @@ footer{
   font-weight: bold;
 }
 
-
 #fitting, form{
     input, select, option, textarea, label{
         font-weight: bold;
@@ -364,7 +371,7 @@ form{
     margin-right: auto;
 }
 
-// strona o nas
+// strona o nas..............................................................................
 
 #onas, #kontakt, #mapa{
     margin-top: 100px;
@@ -399,9 +406,9 @@ form{
 
 
 .card{
-    max-width:250px; //było 250
-    min-width:250px; //było 250
-    min-height: 705px; //było 705
+    max-width:250px;
+    min-width:250px;
+    min-height: 705px;
     background-color: $dirty-green;
     box-shadow: 0 0 20px black;
     margin-left: auto;

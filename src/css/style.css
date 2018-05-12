@@ -6,9 +6,19 @@
   font-family: 'PoiretOne-Regular';
   src: url("../fonts/PoiretOne-Regular.ttf"); }
 
+html {
+  min-height: 100%;
+  position: relative; }
+
 body {
   font-family: "PoiretOne-Regular";
   background-color: #efb633; }
+
+#photos button {
+  padding: 0;
+  background-color: none;
+  border: none;
+  border-radius: 5px; }
 
 .btn {
   font-weight: bold; }
@@ -34,7 +44,7 @@ p {
   font-weight: bold; }
 
 #header {
-  background: url("../img/shapes-pattern.jpg") no-repeat;
+  background: url("../img/header-pattern.jpg") no-repeat;
   background-size: cover;
   height: 90px;
   position: relative; }
@@ -49,7 +59,8 @@ p {
     cursor: pointer; }
   #header span {
     font-family: "Fascinate-Regular";
-    font-size: 50px; }
+    font-size: 50px;
+    text-shadow: 0 0 20px #eeda9d; }
 
 #slider.container {
   min-width: 1600px; }
@@ -57,17 +68,13 @@ p {
 #mySidenav {
   height: auto;
   width: 100%;
-  /* 0 width - change this with JavaScript */
   z-index: 1;
   left: 0;
   background-color: #111;
-  /* Black*/
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   padding-top: 0;
   transition: 0.5s; }
 
-/* The navigation menu links */
 .sidenav a {
   padding: 0px 8px 8px 32px;
   text-decoration: none;
@@ -84,26 +91,20 @@ p {
 .sidenav a:hover {
   color: #f1f1f1; }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
   padding: 20px; }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 450px) {
   #mySidenav {
-    height: 80%;
+    height: 30%;
     width: 100%;
     z-index: 1;
-    /* Stay on top */
     top: 90px;
     left: 0;
     background-color: #111;
-    /* Black*/
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 0;
-    /* Place content 60px from the top */
     position: absolute; }
   .sidenav {
     padding-top: 15px; }
@@ -138,11 +139,18 @@ p {
   .card {
     min-height: 20px !important;
     min-width: 120px !important; }
+    .card img {
+      cursor: pointer; }
   .card-text {
     display: none; } }
 
 .carousel-inner > .carousel-item > img {
   height: 400px; }
+
+#mycarousel h5, #mycarousel p {
+  color: #efb633;
+  font-weight: bold;
+  font-size: 2rem; }
 
 #shopping {
   background: url("../img/suit_shopping.jpg");
@@ -181,15 +189,14 @@ p {
     height: auto; }
 
 footer {
-  background: url("../img/shapes-pattern.jpg") no-repeat;
+  background: url("../img/header-pattern.jpg") no-repeat;
   background-size: cover;
   height: 60px;
-  width: 100%;
-  bottom: 0; }
+  width: 100%; }
   footer a {
     color: black; }
   footer a:hover {
-    color: black; }
+    color: white; }
   footer h3 {
     font-weight: bold; }
 
